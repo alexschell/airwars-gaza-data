@@ -1,5 +1,3 @@
-library(magrittr)
-
 search_nested_list = function(lst, predicate) {
 
   search_helper = function(item) {

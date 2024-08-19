@@ -73,38 +73,6 @@ get_family_ids = function(x) {
   
 }
 
-# get_victims_by_family = function(x, names) {
-#   
-#   victims_grouped = 
-#     find_class(x, "info-main-block victims") %>% 
-#     find_class("victims")
-#   
-#   if (length(victims_grouped) > 0) {
-#     
-#     tmp = unlist(victims_grouped)
-#     idx = c(str_which(tmp, "Family members [\n\t]*\\([0-9]+\\)"), which(tmp %in% names))
-#     
-#     df =
-#       data.frame(val = tmp[sort(idx)]) %>%
-#       mutate(family_id = cumsum(str_detect(val, "Family members [\n\t]*\\([0-9]+\\)"))) %>%
-#       group_by(family_id) %>%
-#       mutate(
-#         n_label = as.numeric(str_extract(val[1], "[0-9]+")),
-#         n_count = n() - 1
-#       ) %>%
-#       ungroup %>%
-#       filter(!str_detect(val, "Family members [\n\t]*\\([0-9]+\\)")) %>%
-#       mutate(victim_id = row_number())
-#     
-#     # if (!all(df$n_label == df$n_count)) warning("cardinality is off")
-#     
-#     # return(df %>% select(victim_id, family_id, val))
-#     return(df)
-#     
-#   }
-#   
-# }
-
 parse_incident = function(x) {
   
   find_class(x, "victims__victim") %>% 

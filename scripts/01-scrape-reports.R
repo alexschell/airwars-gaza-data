@@ -8,59 +8,30 @@ source("scripts/utils.R")
 
 
 
-# 0. Define Functions -------------------------------------------------
-
-parse_victim = function(x) {
-  
-  out = list(
-    name = x %>% find_class("victims__name") %>% unlist %>% paste0(collapse = ""),
-    age = x %>% find_class("commas") %>% find_class("victim-age") %>% unlist,
-    gender = x %>% find_class("commas") %>% find_class("victim-gender") %>% unlist,
-    pregnant = x %>% find_class("commas") %>% find_class("victim-pregnant") %>% unlist,
-    notes = x %>% find_class("commas") %>% find_class("victim-notes") %>% unlist,
-    killed_or_injured = x %>% find_class("commas") %>% find_class("victim-killed-injured") %>% unlist,
-    moh_id = x %>% find_class("commas") %>% find_class("victim-reconciliation-id") %>% unlist
-  )
-  
-  out[sapply(out, function(x) !is.null(x))]
-  
-}
-
-parse_incident = function(x) {
-  
-  find_class(x, "victims__victim") %>% 
-    lapply(parse_victim) %>% 
-    lapply(as.data.frame, row.names = NULL) %>%
-    bind_rows %>%
-    mutate(victim_id = row_number()) %>%
-    select(victim_id, everything())
-  
-}
-
-
-
 # 1. Scrape Reports ---------------------------------------------------
 
 urls = readLines("data/incident_urls_20240816.txt")
 
+# Read HTML
+lst = list()
+for (i in seq_along(urls)) {
+  cat(paste0(urls[i], '\n'))
+  lst[[i]] = as_list(read_html(urls[i]))
+}
+
+# Disk backup
+saveRDS(lst, "data/raw_scrape.rds")
+
+# Parse HTML
 victims_by_incident = list()
-
-for (i in seq(length(urls))) {
-
-  url = urls[i]
-  cat(url)
-  cat('\n')
-  
+for (i in seq_along(lst)) {
   victims_by_incident[[i]] = 
-    read_html(url) %>%
-    as_list %>%
-    parse_incident %>% 
+    parse_incident(lst[[i]]) %>%
     mutate(
-      incident_id = str_extract(url, "ispt[0-9a-z]+"),
-      incident_date = mdy(str_extract(url, "[a-z]+-[0-9]{1,2}-[0-9]{4}"))
+      incident_id = str_extract(urls[i], "ispt[0-9a-z]+"),
+      incident_date = mdy(str_extract(urls[i], "[a-z]+-[0-9]{1,2}-[0-9]{4}"))
     ) %>%
     select(incident_id, incident_date, everything())
-  
 }
 
 df_victims = 
@@ -73,57 +44,85 @@ df_victims =
 
 # 2. Cleaning ---------------------------------------------------------
 
-df_victims_ = 
+df_victims = 
   df_victims %>% 
   mutate(
     
-    designator_en = name %>% str_squish %>% str_extract("^.*[A-Za-z0-9][)`]{0,2}(?=[^A-Za-z0-9]|$)") %>% str_squish,
-    designator_ar = name %>% str_squish %>% str_extract("\\p{Arabic}.*$") %>% str_squish,
+    .name_en = 
+      name_en %>% 
+      str_remove_all("[\u0600-\u06ff]") %>% 
+      str_remove_all("^[ .,]+|[ .,]+$") %>% 
+      str_squish,
+    
+    .name_ar = 
+      name_ar %>% 
+      str_remove_all("[A-Za-z]") %>% 
+      str_remove_all("^[ .,]+|[ .,]+$") %>%
+      str_squish,
 
-    age_num = age %>% str_extract("[0-9.]+(?= years old)"),
-    age_cat = case_when(
+    .age_years = as.numeric(str_extract(age, "[0-9.]+(?=[^0-9]*years old)")),
+    .age_group = case_when(
       age == "Adult" ~ "adult",
       age == "Child" ~ "child",
+      .age_years >= 18 ~ "adult",
+      .age_years < 18 ~ "child",
       TRUE ~ NA_character_
     ),
     
-    killed_or_injured = case_when(
-      killed_or_injured == "killed" ~ "k",
-      killed_or_injured == "injured" ~ "i",
-      TRUE ~ NA_character_
-    ),
-    
-    gender = case_when(
+    .gender = case_when(
       gender == "male" ~ "m",
       gender == "female" ~ "f",
       TRUE ~ NA_character_
     ),
     
-    pregnant = case_when(
+    .pregnant = case_when(
       pregnant == "pregnant" ~ 1L,
-      TRUE ~ NA_integer_
+      TRUE ~ 0L
     ),
     
-    moh_id_ = str_extract(moh_id, "(?<=Matched to MoH ID [^0-9]{0,20})[0-9]{8,9}"),
-    moh_id_ = case_when(
-      is.na(moh_id_) & str_detect(notes, "[0-9]{8,9}") ~ str_extract(notes, "[0-9]{8,9}"),
-      TRUE ~ moh_id_
-    )
+    .killed_or_injured = case_when(
+      killed_or_injured == "killed" ~ "k",
+      killed_or_injured == "injured" ~ "i",
+      TRUE ~ NA_character_
+    ),
+    
+    .moh_id = str_extract(moh_id, "(?<=Matched to MoH ID [^0-9]{0,20})[0-9]{8,9}"),
+    .moh_id = case_when(
+      is.na(.moh_id) & str_detect(notes, "[0-9]{8,9}") ~ str_extract(notes, "[0-9]{8,9}"),
+      TRUE ~ .moh_id
+    ),
     
   )
 
+out = 
+  df_victims %>%
+  select(
+    incident_id,
+    incident_date,
+    family_id,
+    victim_id,
+    name_en = .name_en,
+    name_ar = .name_ar,
+    age_years = .age_years,
+    age_group = .age_group,
+    gender = .gender,
+    pregnant = .pregnant,
+    killed_or_injured = .killed_or_injured,
+    moh_id = .moh_id
+  )
+  
 
 
 # 3. Output -----------------------------------------------------------
 
-write.csv(df_victims, "data/victims.csv", row.names = FALSE, na = "", quote = FALSE)
+write.csv(out, "data/victims.csv", row.names = FALSE, na = "", quote = FALSE)
 
 
 # Check
 
 tmp = read.csv(
   "data/victims.csv", na = "",
-  colClasses = { x = rep("character", 10); x[2] = "Date"; x[3] = "integer"; x }
+  colClasses = { x = rep("character", 12); x[2] = "Date"; x[c(3,4,10)] = "integer"; x[7] = "numeric"; x }
 )
 
-all.equal(df_victims, tmp)
+all.equal(out, tmp)

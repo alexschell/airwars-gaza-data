@@ -15,24 +15,12 @@ urls = readLines("data/incident_urls_20240816.txt")
 # Read HTML
 lst = list()
 for (i in seq_along(urls)) {
-  cat(paste0(urls[i], '\n'))
-  lst[[i]] = as_list(read_html(urls[i]))
+  print(urls[i])
+  lst[[i]] = safe_read_html(urls[i])
 }
-
-# Disk backup
-saveRDS(lst, "data/raw_scrape.rds")
 
 # Parse HTML
-victims_by_incident = list()
-for (i in seq_along(lst)) {
-  victims_by_incident[[i]] = 
-    parse_incident(lst[[i]]) %>%
-    mutate(
-      incident_id = str_extract(urls[i], "ispt[0-9a-z]+"),
-      incident_date = mdy(str_extract(urls[i], "[a-z]+-[0-9]{1,2}-[0-9]{4}"))
-    ) %>%
-    select(incident_id, incident_date, everything())
-}
+victims_by_incident = lst %>% lapply(function(x) parse_incident(x$result))
 
 df_victims = 
   bind_rows(victims_by_incident) %>% 

@@ -1,3 +1,12 @@
+library(httr)
+library(rvest)
+library(xml2)
+library(dplyr)
+library(stringr)
+library(purrr)
+library(lubridate)
+
+# deprecated
 search_nested_list = function(lst, predicate) {
 
   search_helper = function(item) {
@@ -18,47 +27,59 @@ search_nested_list = function(lst, predicate) {
 
 }
 
-class_attr = function(x, y) !is.null(attr(x, ".class")) && attr(x, ".class") == y
-
-find_class = function(x, y) search_nested_list(x, function(u) class_attr(u, y))
+safe_read_html = function(url) {
+  tryCatch(
+    {
+      response = GET(url)
+      stop_for_status(response)
+      list(result = read_html(response), error = NULL)
+    },
+    error = function(e) {
+      list(result = NULL, error = e)
+    }
+  )
+}
 
 parse_victim = function(x) {
+  name_en = x %>% html_node(".victims__name strong") %>% html_text()
+  name_ar = x %>% html_node(".victims__name span") %>% html_text()
+  details = x %>% html_node(".commas")
   
-  out = list(
-    name_en = x %>% find_class("victims__name") %>% unlist %>% `[`(c("div.strong", "div.strong.a")) %>% na.omit %>% `[`(1),
-    name_ar = x %>% find_class("victims__name") %>% unlist %>% `[`(c("div.span", "div.strong.a.span")) %>% na.omit %>% `[`(1),
-    age = x %>% find_class("commas") %>% find_class("victim-age") %>% unlist,
-    gender = x %>% find_class("commas") %>% find_class("victim-gender") %>% unlist,
-    pregnant = x %>% find_class("commas") %>% find_class("victim-pregnant") %>% unlist,
-    notes = x %>% find_class("commas") %>% find_class("victim-notes") %>% unlist,
-    killed_or_injured = x %>% find_class("commas") %>% find_class("victim-killed-injured") %>% unlist,
-    moh_id = x %>% find_class("commas") %>% find_class("victim-reconciliation-id") %>% unlist
+  age = details %>% html_node(".victim-age") %>% html_text()
+  gender = details %>% html_node(".victim-gender") %>% html_text()
+  pregnant = details %>% html_node(".victim-pregnant") %>% html_text()
+  notes = details %>% html_node(".victim-notes") %>% html_text()
+  killed_or_injured = details %>% html_node(".victim-killed-injured") %>% html_text()
+  moh_id = details %>% html_node(".victim-reconciliation-id") %>% html_text()
+  
+  data.frame(
+    name_en = name_en,
+    name_ar = name_ar,
+    age = age,
+    gender = gender,
+    pregnant = pregnant,
+    notes = notes,
+    killed_or_injured = killed_or_injured,
+    moh_id = moh_id
   )
-  
-  out[sapply(out, function(x) !is.null(x))]
-  
 }
 
 get_family_ids = function(x) {
   
-  victims_by_family = 
-    find_class(x, "info-main-block victims") %>% 
-    find_class("victims")
+  victims_by_family = x %>% html_nodes(".info-main-block .victims") %>% html_children()
   
-  n_victims_ungrouped = 
-    find_class(x, 'info-main-block victims')[[1]] %>% 
-    sapply(class_attr, "victims__victim") %>% 
-    sum
+  n_victims_ungrouped = x %>% html_nodes(".info-main-block > .victims__victim") %>% length()
+  n_victims_by_family = x %>% html_nodes(".info-main-block .victims .victims__victim") %>% length()
   
-  if (length(victims_by_family) > 0) {
+  if (n_victims_by_family > 0) {
     
-    idx_labels = victims_by_family[[1]] %>% sapply(class_attr, "victims__label") %>% which
-    idx_victims = victims_by_family[[1]] %>% sapply(class_attr, "victims__victim") %>% which
+    idx_labels = which(html_attr(victims_by_family, "class") == "victims__label")
+    idx_victims = which(html_attr(victims_by_family, "class") == "victims__victim")
     idx_labels = idx_labels[idx_labels < max(idx_victims)]  # edge case: ispt0580
     family_ids = sapply(idx_victims, function(x) which(x < c(idx_labels[-1], Inf))[1]) %>% unname
     
     # Checks
-    n_labels = victims_by_family[[1]][idx_labels] %>% sapply(str_extract, "[0-9]+") %>% as.numeric
+    n_labels = victims_by_family[idx_labels] %>% html_text() %>% sapply(str_extract, "[0-9]+") %>% as.numeric
     stopifnot(all(n_labels == table(family_ids)))
     stopifnot(all(idx_victims > idx_labels[1]))
     stopifnot(all(unique(family_ids) == seq_along(unique(family_ids))))
@@ -73,14 +94,27 @@ get_family_ids = function(x) {
   
 }
 
-parse_incident = function(x) {
+parse_incident = function(html) {
+    
+  if (is.null(html)) {
+    return(NULL)
+  }
   
-  find_class(x, "victims__victim") %>% 
+  incident_id = html %>% html_node(".meta-block.code.current span") %>% html_text(trim = TRUE) %>% tolower()
+  incident_date = html %>% html_node("div[class='meta-block']") %>% html_text(trim = TRUE) %>% 
+    str_extract("[A-Za-z]+ [0-9]{1,2}([^A-Za-z0-9 ][0-9]{1,2})?, [0-9]{4}") %>% str_remove("[^A-Za-z0-9 ][0-9]{1,2}") %>% mdy()
+  victims = html %>% html_nodes(".victims__victim")
+  victim_family_ids = html %>% get_family_ids()
+  
+  victims %>% 
     lapply(parse_victim) %>% 
-    lapply(as.data.frame, row.names = NULL) %>%
-    bind_rows %>%
-    mutate(victim_id = row_number()) %>%
-    mutate(family_id = get_family_ids(x)) %>%
-    select(family_id, victim_id, everything())
+    bind_rows() %>%
+    mutate(
+      incident_id = incident_id,
+      incident_date = incident_date,
+      family_id = victim_family_ids,
+      victim_id = row_number()
+    ) %>%
+    select(incident_id, incident_date, family_id, victim_id, everything())
   
 }

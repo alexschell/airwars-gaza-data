@@ -10,7 +10,11 @@ source("scripts/utils.R")
 
 # 1. Scrape Reports ---------------------------------------------------
 
-urls = readLines("data/incident_urls_20240816.txt")
+
+# Get available incident URLs
+urls = 
+  safe_read_html("https://airwars.org/conflict/israel-and-gaza-2023/")$result %>%
+  html_nodes(".incidentpreviews > .content > .full > .grid a") %>% html_attr("href")
 
 # Read HTML
 lst = list()

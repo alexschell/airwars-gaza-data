@@ -184,12 +184,11 @@ ispt0035,2023-10-08,1,4,Tala Jihad Abdullah Abu Rikab,تالا جهاد عبدا
 ispt0035,2023-10-08,1,5,Maria Jihad Abdullah Abu Rikab,ماريا جهاد عبدالله ابو ركاب,8,child,f,0,k,436102685
 ispt0035,2023-10-08,1,6,Sewar Jihad Abdullah Abu Rikab,سوار جهاد عبدالله ابو ركاب,6,child,f,0,k,438217895
 ispt0035,2023-10-08,1,7,Sham Jihad Abdullah Aburkab,شام جهاد عبدالله ابو ركاب,4,child,m,0,k,438392193
-ispt0036,2023-10-08,1,1,Ayman Younis `Abu Al-Abd`,أيمن يونس,50,adult,m,0,k,953999265
-ispt0036,2023-10-08,1,2,Areej `Umm al-Abd.`,أريج,,,f,0,k,
-ispt0036,2023-10-08,1,3,Abdul Aziz Ayman Younis,عبد العزيز أيمن,14,child,m,0,k,426449476
-ispt0036,2023-10-08,1,4,Alaa Ayman Younis,الاء ايمن يونس,20,adult,f,0,k,408874675
-ispt0036,2023-10-08,1,5,Hala Ayman Younis,حلا أيمن يونس,18,adult,f,0,k,421265133
-ispt0036,2023-10-08,1,6,Lina Ayman Younes,لينة أيمن يونس,16,child,f,0,k,424414084
+ispt0036,2023-10-08,1,1,Areej `Umm al-Abd.`,أريج,,,f,0,k,
+ispt0036,2023-10-08,1,2,Abdul Aziz Ayman Younis,عبد العزيز أيمن,14,child,m,0,k,426449476
+ispt0036,2023-10-08,1,3,Alaa Ayman Younis,الاء ايمن يونس,20,adult,f,0,k,408874675
+ispt0036,2023-10-08,1,4,Hala Ayman Younis,حلا أيمن يونس,18,adult,f,0,k,421265133
+ispt0036,2023-10-08,1,5,Lina Ayman Younes,لينة أيمن يونس,16,child,f,0,k,424414084
 ispt0041,2023-10-08,1,1,Hamed Kamal Abu Aoun,حامد كمال أبو عون,36,adult,m,0,k,800788010
 ispt0041,2023-10-08,1,2,Kamal Hamid Abu Aoun,كمال حامد اأبو عون,13,child,m,0,k,429646748
 ispt0041,2023-10-08,1,3,Omar Hamid Abu Aoun,عمر حامد أبو عون,5,child,m,0,k,440821999
@@ -3452,6 +3451,40 @@ ispt0488,2023-10-22,1,2,Esraa Abu Taqiya,اسراء,,child,f,0,i,
 ispt0488,2023-10-22,1,3,Mariam Abu Taqiya,مريم,,child,f,0,i,
 ispt0488,2023-10-22,1,4,Muhammed Abu Taqiya,محمد,,child,m,0,i,
 ispt0488,2023-10-22,1,5,Abood Abu Taqiya,عبود,,child,m,0,i,
+ispt0488a,2023-10-22,1,1,Raed Youssef Al-Lidawi,رائد يوسف اللداوي,51,adult,m,0,k,921692661
+ispt0488a,2023-10-22,1,2,Iman Ibrahim Naji `Al-Lidawi`,ايمان ابراهيم ناجي اللداوي,44,adult,f,0,k,903510790
+ispt0488a,2023-10-22,1,3,Maryam Raed Al-Lidawi,مريم رائد اللداوي,16,child,f,0,k,424565299
+ispt0488a,2023-10-22,1,4,Ahmed Raed Al-Lidawi,احمد رائد اللداوي,,,m,0,k,
+ispt0488a,2023-10-22,1,5,Fouad Raed Al-Lidawi,فؤاد رائد اللداوي,9,child,m,0,k,434632592
+ispt0488a,2023-10-22,1,6,Latifa Ghassan Jabr `Al-Lidawi`,لطيفة غسان جبر اللداوي,33,adult,f,0,k,802668731
+ispt0488a,2023-10-22,1,7,Jana Raed Al-Lidawi,جنى رائد اللداوي,,child,f,0,k,
+ispt0488a,2023-10-22,1,8,Mahmoud Raed Al-Lidawi,محمود رائد اللداوي,,child,m,0,k,
+ispt0488a,2023-10-22,1,9,Moatasem Raed Al-Lidawi,معتصم رائد اللداوي,7,child,m,0,k,437309560
+ispt0488a,2023-10-22,1,10,Osama Ibrahim Naji,اسامة ابراهيم ناجي,,child,m,0,k,
+ispt0488a,2023-10-22,1,11,Suhaib Osama Naji,صهيب اسامة ناجي,7,child,m,0,k,436980585
+ispt0488a,2023-10-22,1,12,Nasser Hosni Musa,ناصر حسني موسى,39,adult,m,0,k,800309148
+ispt0488a,2023-10-22,1,13,Asmaa Jabr,اسماء جبر,,adult,f,0,k,
+ispt0488a,2023-10-22,1,14,Muhammad Nasser Musa,محمد ناصر موسى,12,child,m,0,k,431021096
+ispt0488a,2023-10-22,1,15,Abdul Rahman Nasser Musa,عبد الرحمن ناصر موسى,8,child,m,0,k,435771548
+ispt0488a,2023-10-22,1,16,Youssef Nasser Musa,يوسف ناصر موسى,10,child,m,0,k,434385217
+ispt0488a,2023-10-22,1,17,Osama Nasser Musa,اسامة ناصر موسى,,child,m,0,k,
+ispt0488a,2023-10-22,1,18,Zeina Nasser Musa,زينة ناصر موسى,4,child,f,0,k,443248257
+ispt0488a,2023-10-22,2,19,Lynn Khalil Abu Salama,لين خليل ابو سلامة,12,child,f,0,k,431523414
+ispt0488a,2023-10-22,2,20,Jihad Khalil Abu Salama,جهاد خليل ابو سلامة,11,child,m,0,k,432144434
+ispt0488a,2023-10-22,2,21,Sham Khalil Abu Salama,شام خليل ابو سلامة,5,child,f,0,k,440413573
+ispt0488a,2023-10-22,2,22,Heba Hosni Musa (Abu Salama),هبة حسني موسى,36,adult,f,0,k,801797176
+ispt0488a,2023-10-22,2,23,Hanin Hosni Musa,حنين حسني موسى,32,adult,f,0,k,802968446
+ispt0488a,2023-10-22,3,24,Samir Salama Musa,سمير سلامة موسى,64,adult,m,0,k,922037155
+ispt0488a,2023-10-22,3,25,Ayman Samir Musa,ايمن سمير موسى,34,adult,m,0,k,802340455
+ispt0488a,2023-10-22,3,26,Abeer Hosni Musa,عبير حسني موسى,29,adult,f,0,k,804795003
+ispt0488a,2023-10-22,3,27,Maria Ayman Musa,ماريا ايمن موسى,5,child,f,0,k,441137221
+ispt0488a,2023-10-22,3,28,Milana Ayman Musa,ميلانا ايمن موسى,3,child,f,0,k,443264312
+ispt0488a,2023-10-22,3,29,Masaa Ayman Musa,ماسة ايمن موسى,1,child,f,0,k,445158611
+ispt0488a,2023-10-22,3,30,Abu Ayman Musa,ابي ايمن موسى,,child,m,0,k,
+ispt0488a,2023-10-22,3,31,Muhammad Jawad Musa,محمد جواد موسى,5,child,m,0,k,440606077
+ispt0488a,2023-10-22,3,32,Nemat Jawad Musa,نعمة جواد موسى,8,child,f,0,k,435789334
+ispt0488a,2023-10-22,,33,Rana Abu Salama Musa,رنا ابو سلامة,44,adult,f,0,k,905201067
+ispt0488a,2023-10-22,,34,Ahmed Musa,أحمد موسى,0.1,child,m,0,i,
 ispt0491,2023-10-22,,1,Sulaiman Abu Younis,سليمان أبو يونس,,adult,m,0,k,
 ispt0491,2023-10-22,,2,Mohammed Fayeq,محمد فايق,,child,m,0,i,
 ispt0134g,2023-10-23,1,1,Hooriyah Ibrahim Muhammad al-Duhshan,أم السعيد الدهشان,73,adult,f,0,k,913035143
@@ -3533,6 +3566,21 @@ ispt0507,2023-10-23,1,6,Marwa Ahmed Sweilem,مروة احمد سويلم,23,adul
 ispt0507,2023-10-23,1,7,Amir Munther Sweilem,امير منذر سويلم,22,adult,m,0,k,406096735
 ispt0507,2023-10-23,1,8,Ahlam Munther Sweilem,احلام منذر سويلم,18,adult,f,0,k,406096735
 ispt0507,2023-10-23,1,9,Islam Munther Sweilem,اسلام منذر سويلم,16,child,m,0,k,406096735
+ispt0509,2023-10-23,1,1,Riyad Salem Deeb Sukkar,رياض سكر,72,adult,m,0,k,910897057
+ispt0509,2023-10-23,1,2,Ismail Sukkar,اسماعيل سكر,,adult,m,0,k,
+ispt0509,2023-10-23,1,3,Salem Sukkar,سالم سكر,50,adult,m,0,k,920616752
+ispt0509,2023-10-23,1,4,Sanaa Issa Hassan Khalifa Sukkar,سناء عيسى حسن خليفه سكر,45,adult,f,0,k,901451765
+ispt0509,2023-10-23,1,5,Riyad Salem Sukkar,رياض سالم سكر,23,adult,m,0,k,405999459
+ispt0509,2023-10-23,1,6,Souad Hossam Muharram,سعاد حسام محرم,16,child,f,0,k,424394757
+ispt0509,2023-10-23,1,7,Sousso Sukkar,سوسو سكر,,child,f,0,k,
+ispt0509,2023-10-23,1,8,Muhammad Salem Sukkar,محمد سالم سكر,20,adult,m,0,k,409310455
+ispt0509,2023-10-23,1,9,Ahmed Salem Sukkar,احمد سالم سكر,17,child,m,0,k,422786061
+ispt0509,2023-10-23,1,10,Zahida Salem Sukkar,زاهدة سالم سكر,15,child,f,0,k,425845294
+ispt0509,2023-10-23,1,11,Shahd Salem Sukkar,شهد سالم سكر,8,child,f,0,k,436061790
+ispt0509,2023-10-23,1,12,Rana Kamal Mohamed Abu salmiya Matar,رنا كمال محمد ابوسلمية مطرا,28,adult,f,0,k,400821583
+ispt0509,2023-10-23,1,13,Bilal Sukkar,بلال سكر,7,child,m,0,k,435919840
+ispt0509,2023-10-23,1,14,Bahaa Sukkar,بهاء سكر,,child,m,0,k,
+ispt0509,2023-10-23,1,15,Bilsan Sukkar,بيلسان سكر,,child,f,0,k,
 ispt0513,2023-10-23,1,1,Maysaa Saadoun (Hamdan),ميساء سعدون (حمدان),23,adult,f,0,k,405932195
 ispt0513,2023-10-23,1,2,Wadih Ahmed Hamdan,وديع أحمد حمدان,1,child,m,0,k,445860489
 ispt0513,2023-10-23,2,3,Fidaa al-Lidawi,فداء اللداوي,,adult,m,0,i,
@@ -4518,6 +4566,25 @@ ispt0719,2023-10-29,1,11,Jana Mustafa Khalil Tammos,جنى مصطفى خليل �
 ispt0719,2023-10-29,1,12,Siwar Mustafa Khalil Tammos,سوار مصطفى خليل طموس,5,child,f,0,k,438080095
 ispt0719,2023-10-29,1,13,Mohammed Mustafa Khalil Tammos,محمد مصطفى خليل طموس,1,child,m,0,k,444353528
 ispt0719,2023-10-29,1,14,Enas Muhammad Hussein Fares,ايناس محمد حسين فارس,,,m,0,i,
+ispt0724,2023-10-29,1,1,Rasmiya Al-Helou,رسمية الحلو,,adult,f,0,k,
+ispt0724,2023-10-29,1,2,Hatem Mahmoud Shaaban Al-Helou,حاتم محمود شعبان الحلو,48,adult,m,0,k,900215708
+ispt0724,2023-10-29,1,3,Mahmoud Hatem Al-Helou,محمود حاتم الحلو,,,m,0,k,
+ispt0724,2023-10-29,1,4,Moatasem Hatem Al-Helou,معتصم حاتم الحلو,,,m,0,k,
+ispt0724,2023-10-29,1,5,Muhammad Mahmoud Shaaban Al-Helou,محمد محمود شعبان الحلو,,adult,m,0,k,
+ispt0724,2023-10-29,1,6,Ammar Mahmoud Al-Helou,عمار محمود الحلو,33,adult,m,0,k,802524454
+ispt0724,2023-10-29,1,7,Nidal Mahmoud Al-Helou,نضال محمود الحلو,35,adult,m,0,k,801990557
+ispt0727,2023-10-29,1,1,Zaki Shukri Al-Kurd,زكي شكري الكرد,,adult,m,0,i,
+ispt0727,2023-10-29,1,2,Kifah Ismail Shukri Al-Kurd,كفاح اسماعيل شكري الكرد,47,adult,f,0,k,901691659
+ispt0727,2023-10-29,1,3,Sondos Zaki Shukri Al-Kurd,سندس زكي شكري الكرد,18,adult,f,0,k,422607283
+ispt0727,2023-10-29,1,4,Nour Zaki Shukri al-Kurd,نور زكي شكري الكرد,21,adult,f,0,k,408657336
+ispt0727,2023-10-29,1,5,Muhammad Zaki Shukri Al-Kurd,محمد زكي شكري الكرد,10,child,m,0,k,434536777
+ispt0727,2023-10-29,1,6,Shahed Zaki Shukri Al-Kurd,شهد زكي شكري الكرد,19,adult,f,0,k,409911344
+ispt0727,2023-10-29,1,7,Abdullah Zaki Shukri Al-Kurd,عبدالله زكي شكري الكرد,14,child,m,0,k,429418205
+ispt0727,2023-10-29,1,8,Abeer Ismail Saeed Al-Kurd,عبير اسماعيل سعيد الكرد,44,adult,f,0,k,905403507
+ispt0727,2023-10-29,1,9,Saeed Shukri Al-Kurd,سعيد شكري الكرد,,adult,m,0,i,
+ispt0727,2023-10-29,1,10,Shukri Saeed Shukri Al-Kurd,شكري سعيد شكري الكرد,21,adult,m,0,k,408861326
+ispt0727,2023-10-29,1,11,Ahmed Saeed Shukri Al-Kurd,أحمد سعيد شكري الكرد,,,m,0,i,
+ispt0727,2023-10-29,1,12,Mahmoud Saeed Shukri Al-Kurd,محمود سعيد شكري الكرد,,,m,0,i,
 ispt0737,2023-10-29,1,1,Shahed Jihad Ahmed Al-Maghari,شهد جهاد احمد المغاري,20,adult,f,0,k,409816071
 ispt0737,2023-10-29,1,2,Jamal Muhammad Jamal Al-Maghari,جمال محمد جمال المغاري,1,child,m,0,k,444029649
 ispt0737,2023-10-29,1,3,Sarah Muhammad Jamal Al-Maghari,سارة محمد جمال المغاري,3,child,f,0,k,444830350
@@ -4554,6 +4621,16 @@ ispt0749,2023-10-30,1,19,Manal Taha Muhammad Al Badrasawi,منال طه البد
 ispt0749,2023-10-30,1,20,Child of Manal 1,طفل منال,,,,0,k,
 ispt0749,2023-10-30,1,21,Child of Manal 2,طفل منال,,,,0,k,
 ispt0749,2023-10-30,1,22,Mustafa Muhammad Essam Joyfel,مصطفى محمد عصام جويفل,7,child,m,0,k,437259641
+ispt0751,2023-10-30,1,1,Abdullah Mufid Abdullah Hijazi,عبدالله مفيد عبدالله حجازي,32,adult,m,0,k,803600311
+ispt0751,2023-10-30,1,2,Jihad Youssef Abdullah Hijazi,جهاد يوسف عبدالله حجازي,29,adult,f,0,k,400609392
+ispt0751,2023-10-30,1,3,Youssef Abdullah Mufid Hijazi,يوسف عبدالله مفيد حجازي,5,child,m,0,k,441339041
+ispt0751,2023-10-30,1,4,Masa Abdullah Mufid Hijazi,ماسة عبدالله مفيد حجازي,2,child,f,0,k,444419147
+ispt0751,2023-10-30,1,5,Mufid Abdullah Mufid Hijazi,مفيد عبدالله مفيد حجازي,6,child,m,0,k,439031410
+ispt0751,2023-10-30,1,6,Hamza Mufid Abdullah Hijazi,حمزه مفيد عبدالله حجازي,33,adult,m,0,k,802863035
+ispt0751,2023-10-30,1,7,Asmaa Hamad Suleiman Hijazi,اسماء حمد سليمان حجازي,32,adult,f,0,k,803559863
+ispt0751,2023-10-30,1,8,Karim Hamza Mufid Hijazi,كريم حمزه مفيد حجازي,8,child,m,0,k,437226475
+ispt0751,2023-10-30,1,9,Ghala Hamza Mufid Hijazi,غلا حمزه مفيد حجازي,4,child,f,0,k,442310447
+ispt0751,2023-10-30,1,10,Abdullah Hamza Mufid Hijazi,عبد الله حمزه مفيد حجازي,9,child,m,0,k,435226964
 ispt0754,2023-10-30,1,1,Hikmat Al-Maqousi,حكمت المقوسي,72,adult,f,0,k,922002241
 ispt0754,2023-10-30,1,2,Suha Al Maqousi,سها المقوسي,43,adult,f,0,k,905376414
 ispt0754,2023-10-30,1,3,Ibrahim Al-Maqousi,إبراهيم المقوسي,12,child,m,0,k,432487817
@@ -5726,3 +5803,90 @@ ispt130724h,2024-07-13,,16,Bassam al-Omari,بسام العمري,,adult,m,0,k,
 ispt130724h,2024-07-13,,17,Yahya Shahada Abu Mahmoud,يحيى شحادة أبو محمود,,adult,m,0,k,
 ispt130724h,2024-07-13,,18,Ashraf al-Masoabi,اشرف المعصوابي,,adult,m,0,k,
 ispt130724h,2024-07-13,,19,Tawfiq Hassan Atallah,توفيق حسن عطالله,,,m,0,k,
+ispt100824f,2024-08-10,1,1,Ashraf Rafiq Al-Abd Al-Ghafri `Abu Rafiq`,أشرف رفيق العبد الغفري ` أبو رفيق,,adult,m,0,k,
+ispt100824f,2024-08-10,1,2,Muhammad Ramadan Ishtiwi Al-Ghafri `Abu Khattab`,أ. محمد رمضان اشتيوي الغفري ` أبو خطاب `,,adult,m,0,k,
+ispt100824f,2024-08-10,1,3,Asmaa Talat Asaad Al-Ghafri,أسماء طلعت أسعد الغافري,,adult,f,0,k,
+ispt100824f,2024-08-10,1,4,Israa Muhammad Ramadan Al-Ghafri,إسراء محمد رمضان الغافري,,child,f,0,k,
+ispt100824f,2024-08-10,1,5,Rimas Muhammad Ramadan Al-Ghafri,ريماس محمد رمضان الغافري,,child,f,0,k,
+ispt100824f,2024-08-10,1,6,Sundus Muhammad Ramadan Al-Ghafri,سندس محمد رمضان الغافري,,child,f,0,k,
+ispt100824f,2024-08-10,1,7,Khattab Muhammad Ramadan Al-Ghafri,خطاب محمد رمضان الغافري,,child,m,0,k,
+ispt100824f,2024-08-10,1,8,Elias Muhammad Ramadan Al-Ghafri,الياس محمد رمضان الغافري,,child,m,0,k,
+ispt100824f,2024-08-10,1,9,Osama Muhammad Ramadan Al-Ghafri,اسامه محمد رمضان الغافري,,child,m,0,k,
+ispt100824f,2024-08-10,1,10,Abdullah Ramadan Al-Ghafri,عبدالله رمضان الغفري,,adult,m,0,k,
+ispt100824f,2024-08-10,2,11,Mahmoud Al-Jabri (Abu Nabil),محمود الجعبري (ابو نبيل),90,adult,m,0,k,
+ispt100824f,2024-08-10,2,12,Nabil Mahmoud Al-Jabri,نبيل محمد الجعبري,,adult,m,0,k,
+ispt100824f,2024-08-10,2,13,Ziad Bakr Al-Jabri,زياد بكر الجعبري,,adult,m,0,k,
+ispt100824f,2024-08-10,2,14,Barham Ziad Al-Jabri,برهم زياد الجعبري,,,m,0,k,
+ispt100824f,2024-08-10,2,15,Ihab Bakr Al-Jabri,ايهاب بكر الجعبري,,,m,0,k,
+ispt100824f,2024-08-10,2,16,Ahmed Hammad Al-Jabri,أحمد حماد الجعبري,,,m,0,k,
+ispt100824f,2024-08-10,2,17,Mahmoud Ihab Al-Jabri,محمود ايهاب الجعبري,,,m,0,k,
+ispt100824f,2024-08-10,2,18,Amal Saeed Al-Jabri,أمل سعيد الجعبري,,,f,0,k,
+ispt100824f,2024-08-10,2,19,Tamam Saeed Al-Jabri,تمام سعيد الجعبري,,,m,0,k,
+ispt100824f,2024-08-10,2,20,Omar Yasser Al-Jabari,عمر ياسر الجعبري,13,child,m,0,k,
+ispt100824f,2024-08-10,2,21,Mahmoud Yasser Al-Jabri,محمود ياسر الجعبري,,,m,0,k,
+ispt100824f,2024-08-10,2,22,Umm Ahmed Al-Jabri,أم أحمد الجابري,,adult,f,0,k,
+ispt100824f,2024-08-10,2,23,Mohammed Ihab Al-Jabri,محمد إيهاب الجعبري,,,m,0,i,
+ispt100824f,2024-08-10,2,24,Ahmed Yasser Al-Jabri,احمد ياسر الجعبري,,,m,0,i,
+ispt100824f,2024-08-10,2,25,Hamza Yasser Al-Jabri,حمزة ياسر الجعبري,,,m,0,i,
+ispt100824f,2024-08-10,2,26,Asmaa Riyad Al-Jabri,أسماء رياض الجعبري,,,,0,i,
+ispt100824f,2024-08-10,2,27,Munawar Rajab Al-Jabri,منور رجب الجعبري,,,,0,i,
+ispt100824f,2024-08-10,2,28,Tamam Mohammed Al-Jabri,تمام محمد الجعبري,,,,0,i,
+ispt100824f,2024-08-10,2,29,Sadiq Saeed Al-Jabri,صديق سعيد الجعبري,,,,0,i,
+ispt100824f,2024-08-10,2,30,Naeem Ziad Al-Jabri,نعيم زياد الجعبري,,,,0,i,
+ispt100824f,2024-08-10,3,31,Abdul Qader Hassan Al-Basyouni (Abu Ahmed),عبدالقادر حسن البسيوني. ابو احمد,,adult,m,0,k,
+ispt100824f,2024-08-10,3,32,Nidal Abdul Qader Al-Basyouni (Abu Al-Abd),نضال عبد القادر البسيوني,,,,0,k,
+ispt100824f,2024-08-10,3,33,Subhi Mansour Abu Awda (Abu Ihab),صبحي منصور ابو عودة (ابو ايهاب,,adult,m,0,k,
+ispt100824f,2024-08-10,4,34,Ahed Hassan Abu Asr `Abu Hani`,عاهد حسن أبو عصر ` أبو هاني,,,m,0,k,
+ispt100824f,2024-08-10,4,35,Hassan Ahed Abu Asr,حسن عاهد ابو عصر,,,,0,k,
+ispt100824f,2024-08-10,4,36,Bilal Abu Asr,بلال أبو عصر,,,,0,k,
+ispt100824f,2024-08-10,5,37,Muhammad Jabr Habib,محمد جبر حبيب,,,m,0,k,
+ispt100824f,2024-08-10,5,38,Moamen Jabr Habib,مؤمن جبر حبيب,,,m,0,k,
+ispt100824f,2024-08-10,5,39,Muhammed Ramadan Habib,محمد رمضان حبيب,,,m,0,,
+ispt100824f,2024-08-10,6,40,Anwar Saad Al-Zaim `Abu Ahmed`,أنور سعد الزعيم `أبو احمد`,,,,0,k,
+ispt100824f,2024-08-10,6,41,Shadi Raafat Al-Zaim `Abu Raafat`,شادي رأفت الزعيم `أبو رأفت`,,,,0,k,
+ispt100824f,2024-08-10,7,42,Saad Mustafa Mahani,سعد مصطفى مهاني,,,m,0,k,
+ispt100824f,2024-08-10,7,43,Aboud Mustafa Mahani,عبود مصطفى مهاني,,,m,0,k,
+ispt100824f,2024-08-10,7,44,Ahmed Mustafa Mahani,احمد مصطفى مهاني,,,m,0,k,
+ispt100824f,2024-08-10,7,45,Zeina Youssef Mahani,زينة يوسف مهاني,,,,0,k,
+ispt100824f,2024-08-10,8,46,Naseeba Jihad Bakhit,نسيبة جهاد بخيت,,,,0,k,
+ispt100824f,2024-08-10,8,47,Retaj Jihad Bakhit,ريتاج جهاد بخيت,,,,0,k,
+ispt100824f,2024-08-10,9,48,Nabhan Harb Abu Halima,نبهان حرب ابو حليمة,,,,0,k,
+ispt100824f,2024-08-10,9,49,Harb Abu Halima,حرب أبو حليمة,,,,0,k,
+ispt100824f,2024-08-10,10,50,Bilal Qasim (Abu Malik),بلال قاسم,,adult,m,0,k,
+ispt100824f,2024-08-10,10,51,Wael Sami Abdullah Qasim,وائل سامي عبدالله قاسم,,,,0,k,
+ispt100824f,2024-08-10,,52,Ahmed Maher Sharaf `Abu Obeida`,أحمد ماهر شرف `ابو عبيدة`,,,,0,k,
+ispt100824f,2024-08-10,,53,Yousef Al-Shoubaki,يوسف الشوبكي,,adult,m,0,k,
+ispt100824f,2024-08-10,,54,Muhammad Abu Haya (Abu Zaki),محمد ابو حية(أبو زكي,,,m,0,k,
+ispt100824f,2024-08-10,,55,Muhammad Omar Al Masry,محمد عمر المصري,,,m,0,k,
+ispt100824f,2024-08-10,,56,Yousef Shahada Al-Kahlout Abu Osama,يوسف شحدة الكحلوت أبو أسامة,,adult,m,0,k,
+ispt100824f,2024-08-10,,57,Muhammad Hassan Abu Saada (Abu Anas),محمد حسن أبو سعدة (أبو أنس),,adult,m,0,k,
+ispt100824f,2024-08-10,,58,Abdul Aziz Misbah Al Kafarna (Abu Mohsen),عبد العزيز مصباح الكفارنة (ابو محسن),,adult,m,0,k,
+ispt100824f,2024-08-10,,59,Moataz Rajab (Abu Al-Baraa),معتز رجب أبو البراء,,adult,m,0,k,
+ispt100824f,2024-08-10,,60,Majdi Muhammad al-Tatar (Abu al-Moatasem),مجدي محمد التتر (أبو المعتصم),,adult,m,0,k,
+ispt100824f,2024-08-10,,61,Zayed Yassin Al-Dalo (Abu Adi),زايد ياسين الدلو، ابو عدي,,adult,m,0,k,
+ispt100824f,2024-08-10,,62,Amjad Muhammad Al-Yemeni (Abu Muslimah),أمجد محمد اليمني ` أبو مسلمة `,,adult,m,0,k,
+ispt100824f,2024-08-10,,63,Yousef Shwaidih (Abu Al-Baraa),يوسف شويدح ( ابو البراء ),,adult,m,0,k,
+ispt100824f,2024-08-10,,64,Murad Rajab Shamlakh,مراد رجب شملخ,,,,0,k,
+ispt100824f,2024-08-10,,65,Mohammed Hamed Al-Tayf (Abu Hamed),محمد حامد الطيف / ابو حامد,,adult,m,0,k,
+ispt100824f,2024-08-10,,66,Mahmoud Masoud,محمود مسعود,,,,0,k,
+ispt100824f,2024-08-10,,67,Mohammed Jabr Harara (Abu Ibrahim),محمد جبر حرارة (أبو إبراهيم),,adult,m,0,k,
+ispt100824f,2024-08-10,,68,Abdullah Samir Al-Areer (Abu Al-Nour),عبد الله سمير العرعير ( أبو النور),,adult,m,0,k,
+ispt100824f,2024-08-10,,69,Obaida Hamid Saeed Madoukh (Abu Omar),عبيدة حامد سعيد مدوخ (ابوعمر),,adult,m,0,k,
+ispt100824f,2024-08-10,,70,Youssef Sayed Saleh Al-Wadiah,يوسف سيد صالح الوادية,,,,0,k,
+ispt100824f,2024-08-10,,71,Abdul Karim Rushdi Hamad,عبد الكريم رشدي حمد,,,,0,k,
+ispt100824f,2024-08-10,,72,Eid Rafiq Atallah,عيد رفيق عطاالله,,,,0,k,
+ispt100824f,2024-08-10,,73,Ramzi Hafez Atallah,رمزي حافظ عطاالله,,,,0,k,
+ispt100824f,2024-08-10,,74,Ali Abdul Rahman Youssef Haraz,علي عبد الرحمن يوسف حرز,,,,0,k,
+ispt100824f,2024-08-10,,75,Hussein Jamil Al-Safadi,حسين جميل الصفدي,,,,0,k,
+ispt100824f,2024-08-10,,76,Iyad Yahya Al-Amriti (Abu Anas),إياد يحيى العمريطي - أبو أنس,,adult,m,0,k,
+ispt100824f,2024-08-10,,77,Osama Muhammad Majid,أسامة محمد ماجد,,,,0,k,
+ispt100824f,2024-08-10,,78,Ibrahim Mustafa Hamad,ابراهيم مصطفي حمد,,,,0,k,
+ispt100824f,2024-08-10,,79,Muhammad Abdullah Abu Ras (Abu Hamza),محمد عبدالله أبوراس ( أبوحمزة),,adult,m,0,k,
+ispt100824f,2024-08-10,,80,Sameh Ahmed Qassem (Abu Ahmed),سامح احمد قاسم (ابو احمد ),,adult,m,0,k,
+ispt100824f,2024-08-10,,81,Shaaban Yassin (Abu Al-Moatasem),شعبان ياسين - أبو المعتصم,,,m,0,k,
+ispt100824f,2024-08-10,,82,Ahmed Saber Obaid,أحمد صابر عبيد,,,,0,k,
+ispt100824f,2024-08-10,,83,Hussein Akram Zeno,حسين اكرم زينو,,,,0,k,
+ispt100824f,2024-08-10,,84,Sand Jaarour,سند جعرور,,,,0,k,
+ispt100824f,2024-08-10,,85,Hamed Mohammed Zeno,حامد محمد زينو,,,,0,k,
+ispt100824f,2024-08-10,,86,Anas Naser Obaid,انس صابر عبيد,,,,0,i,
+ispt100824f,2024-08-10,,87,Tareq Al-Safadi (Abu Muhammad),طارق الصفدي (ابو محمد),,adult,m,0,k,
